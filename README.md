@@ -1,1 +1,1 @@
-# hw_html_localStorage
+請用 jQuery 改寫我們課堂曾經做過的這個範例。
