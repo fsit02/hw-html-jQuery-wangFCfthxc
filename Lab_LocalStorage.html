@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>LocalStorage Lab</title>
+<script src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+            
+        });  
+</script>
 
 <style type="text/css">
 body {
@@ -92,6 +98,46 @@ fieldset .submit {
 
 <span id="test"></span>
 
+	<script>
+
+		function doChange() {
+			// document.getElementById("test").innerHTML += this.name + ":" + this.value + "<br>";
+			localStorage.setItem(this.name, this.value);
+		}
+		
+		$("#txtName").on("keyup" , doChange);
+		// document.getElementById("txtName").onkeyup = doChange;
+		$("#txtEmail").on("keyup", doChange);
+		// document.getElementById("txtEmail").onkeyup = doChange;
+		$("#txtPhone").on("keyup" , doChange);
+		// document.getElementById("txtPhone").onkeyup = doChange;
+		
+		
+		
+		function readAndShow() {
+		if (localStorage["txtName"])
+			$("#txtName").val(localStorage["txtName"]);
+			// document.getElementById("txtName").value = localStorage["txtName"];
+		if (localStorage["txtEmail"])
+			$("#txtEmail").val(localStorage["txtEmail"]);
+			// document.getElementById("txtEmail").value = localStorage["txtEmail"];
+		if (localStorage["txtPhone"])
+			$("#txtPhone").val(localStorage["txtPhone"]);
+			// document.getElementById("txtPhone").value = localStorage["txtPhone"];
+		 }
+			
+
+		
+	$(document).ready(readAndShow);
+	// window.onload = readAndShow;
+	
+
+		$("#btnSubmit").click(function () {
+			localStorage.clear();
+		})
+
+	// document.forms[0].onsubmit = function () { localStorage.clear(); };	
+	</script>
 
 </body>
 </html>

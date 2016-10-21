@@ -1,11 +1,20 @@
 ﻿1.	以 HTML Editor 開啟 Lab_LocalStorage.html，
 	找出表單的三個文字輸入方塊，它們的 id 分別是什麼?
+	Ans:
+		txtName
+		txtEmail
+		txtPhone
 
 
 2.	在 </body> 前，新增一個 <script> 區塊，貼入下列程式碼，
 	用瀏覽器測試一下效果，
 	請簡要描述一下這段程式的內容／功能:
-
+	Ans:
+		當
+			(文字輸入方塊 ID="txtName")
+			(文字輸入方塊 ID="txtEmail")
+			(文字輸入方塊 ID="txtPhone")
+										有輸入做改變時就做function doChange()以下程式
 <script>
 	function doChange() {
 		document.getElementById("test").innerHTML += this.name + ":" + this.value + "<br>";
